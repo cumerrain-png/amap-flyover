@@ -1,0 +1,38 @@
+{
+  "name": "amap-flyover",
+  "version": "1.0.0",
+  "description": "输入起点和终点，生成卡通欢乐风的高德路线飞行动画网页；也可作为 Cursor Agent Skill",
+  "private": true,
+  "license": "MIT",
+  "keywords": [
+    "remotion",
+    "maplibre",
+    "amap",
+    "cursor-skill",
+    "flyover"
+  ],
+  "scripts": {
+    "generate": "node scripts/generateGeoJSON.js",
+    "generate:beijing-shanghai": "node scripts/generateGeoJSON.js --origin 北京 --destination 上海",
+    "dev": "vite --config templates/vite.config.ts",
+    "build": "vite build --config templates/vite.config.ts",
+    "preview": "vite preview --config templates/vite.config.ts"
+  },
+  "dependencies": {
+    "@remotion/player": "^4.0.0",
+    "@turf/turf": "^7.2.0",
+    "coordtransform": "^2.1.2",
+    "maplibre-gl": "^4.7.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/geojson": "^7946.0.16",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11"
+  }
+}
